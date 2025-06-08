@@ -1,14 +1,11 @@
 namespace Tmds.Linux;
 
-using System.Diagnostics.CodeAnalysis;
-
 [SuppressMessage ("ReSharper", "InconsistentNaming")]
 #pragma warning disable CS8981 // The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
-public struct flock
+public unsafe struct group
 {
-  public short l_type;
-  public short l_whence;
-  public off_t l_start;
-  public off_t l_len;
-  public pid_t l_pid;
+  public byte*  gr_name;
+  public byte*  gr_passwd;
+  public gid_t  gr_gid;
+  public byte** gr_mem;
 }

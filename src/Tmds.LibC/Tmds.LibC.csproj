@@ -22,6 +22,7 @@
     <ItemGroup>
         <Using Include="System.Int32" Alias="mode_t" />
         <Using Include="System.Int32" Alias="off_t" />
+        <Using Include="System.Diagnostics.CodeAnalysis" />
         <Using Include="Tmds.LibC" />
         <Using Include="Tmds.LibC.LibraryNames" Static="True" />
     </ItemGroup>
