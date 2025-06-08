@@ -1,0 +1,16 @@
+root = true
+charset = utf-8
+indent_style = space
+indent_size = 2
+spelling_language = en-US
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[src/Tmds.LibC/Types/*.cs]
+# CS8981: The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
+dotnet_diagnostic.CS8981.severity = none
+
+# CA1051: Do not declare visible instance fields
+dotnet_diagnostic.CA1051.severity = none
+
+resharper_inconsistent_naming_highlighting = none
