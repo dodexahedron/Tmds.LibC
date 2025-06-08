@@ -1,5 +1,14 @@
-[![Travis](https://api.travis-ci.org/tmds/Tmds.LibC.svg?branch=master)](https://travis-ci.org/tmds/Tmds.LibC)
-[![NuGet](https://img.shields.io/nuget/v/Tmds.LibC.svg)](https://www.nuget.org/packages/Tmds.LibC)
+### This is a fork of the now-archived original [Tmds.LibC](https://github.com/tmds/Tmds.LibC) library.
+
+The project will be renamed in a later major version but, for now, is being left named as-is, for compatibility.\
+When renamed, a Tmds.LibC package will be provided for at least the initial major and following minor versions which will consist solely of type forwards to the new project, to ease migration.\
+New development, post-rename, will not be back-ported or type-forwarded from Tmds.LibC and will only exist in the new namespace (name TBD).
+
+At this time, there has been only one addition made, which was originally proposed in a PR to the original project but was not merged before the project was archived.\
+That addition adds the canonicalize_file_name function, for resolving relative and symlink paths to fully-qualified canonical paths.
+
+No published nuget package exists for this fork at this time, and I do not plan to provide one unless and until I move forward with renaming and continuing work on the library.
+
 # Tmds.LibC
 
 Raw bindings to Linux platform APIs for .NET Core.
@@ -23,8 +32,6 @@ Add the package using the `dotnet` cli:
 ```
 $ dotnet add package Tmds.LibC
 ```
-
-Alternatively, you can use a daily build from the https://www.myget.org/F/tmds/api/v3/index.json NuGet feed.
 
 Program.cs
 
