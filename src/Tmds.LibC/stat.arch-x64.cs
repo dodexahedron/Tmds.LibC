@@ -8,7 +8,6 @@ public unsafe struct stat
   public        mode_t    st_mode;
   public        uid_t     st_uid;
   public        gid_t     st_gid;
-  private       uint      __pad0;
   public        dev_t     st_rdev;
   public        off_t     st_size;
   public        blksize_t st_blksize;
@@ -16,5 +15,6 @@ public unsafe struct stat
   public        timespec  st_atim;
   public        timespec  st_mtim;
   public        timespec  st_ctim;
-  private fixed long      __unused[3];
+  private       uint      __pad0;
+  private fixed long      __unused [3];
 }

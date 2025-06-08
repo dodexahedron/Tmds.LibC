@@ -18,21 +18,21 @@ public struct scm_timestamping
   public timespec ts2;
 }
 
-public unsafe static partial class LibC
+public static unsafe partial class LibC
 {
-  public static byte SO_EE_ORIGIN_NONE         => 0;
-  public static byte SO_EE_ORIGIN_LOCAL        => 1;
-  public static byte SO_EE_ORIGIN_ICMP         => 2;
-  public static byte SO_EE_ORIGIN_ICMP6        => 3;
-  public static byte SO_EE_ORIGIN_TXSTATUS     => 4;
-  public static byte SO_EE_ORIGIN_ZEROCOPY     => 5;
-  public static byte SO_EE_ORIGIN_TIMESTAMPING => SO_EE_ORIGIN_TXSTATUS;
+  public static uint SCM_TSTAMP_ACK   => 2;
+  public static uint SCM_TSTAMP_SCHED => 1;
 
-  public static sockaddr* SO_EE_OFFENDER(sock_extended_err* ee) => ((sockaddr*)((ee) + 1));
+  public static uint SCM_TSTAMP_SND => 0;
 
   public static byte SO_EE_CODE_ZEROCOPY_COPIED => 1;
 
-  public static uint SCM_TSTAMP_SND   => 0;
-  public static uint SCM_TSTAMP_SCHED => 1;
-  public static uint SCM_TSTAMP_ACK   => 2;
+  public static sockaddr* SO_EE_OFFENDER (sock_extended_err* ee) => (sockaddr*)(ee + 1);
+  public static byte      SO_EE_ORIGIN_ICMP                      => 2;
+  public static byte      SO_EE_ORIGIN_ICMP6                     => 3;
+  public static byte      SO_EE_ORIGIN_LOCAL                     => 1;
+  public static byte      SO_EE_ORIGIN_NONE                      => 0;
+  public static byte      SO_EE_ORIGIN_TIMESTAMPING              => SO_EE_ORIGIN_TXSTATUS;
+  public static byte      SO_EE_ORIGIN_TXSTATUS                  => 4;
+  public static byte      SO_EE_ORIGIN_ZEROCOPY                  => 5;
 }

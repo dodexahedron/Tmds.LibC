@@ -9,9 +9,9 @@ public struct sockaddr_hci
 
 public static partial class LibC
 {
-  public static ushort HCI_DEV_NONE => 0xffff;
-
-  public static ushort HCI_CHANNEL_RAW     => 0;
-  public static ushort HCI_CHANNEL_MONITOR => 2;
   public static ushort HCI_CHANNEL_CONTROL => 3;
+  public static ushort HCI_CHANNEL_MONITOR => 2;
+
+  public static ushort HCI_CHANNEL_RAW => 0;
+  public static ushort HCI_DEV_NONE    => 0xffff;
 }
